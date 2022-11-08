@@ -1,4 +1,5 @@
 import React from 'react';
+import './Banner.css'
 
 const BannerItem = ({slide}) => {
   console.log(slide.image)
@@ -6,7 +7,7 @@ const BannerItem = ({slide}) => {
     return (
         <div id={`slide${id}`} className="carousel-item relative w-full">
         <div className='carousel-img'>
-          <img src={image} alt='img1' className="w-full" /> 
+          <img src={image} alt='img1' className="w-full rounded-xl" /> 
         </div>
         <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
           <h1 className='text-6xl font-bold text-white'>
@@ -23,8 +24,8 @@ const BannerItem = ({slide}) => {
          <button className='btn btn-outline btn-warning'>Hello</button>
          </div> 
         <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-          <a href={`#slide${prev}`}  className="btn btn-circle mr-5">❮</a> 
-          <a href={`#slide${next}`}  className="btn btn-circle">❯</a>
+          <a href={`#slide${prev}`}  className="btn btn-circle bg-orange-600 border-none mr-5 text-white">❮</a> 
+          <a href={`#slide${next}`}  className="btn btn-circle bg-orange-600 border-none text-white">❯</a>
         </div>
       </div> 
     );
